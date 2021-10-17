@@ -1,0 +1,8 @@
+.doctor-column {
+  text-align: right;
+}
+
+.banner-img {
+  background-image: url(../../images/banner.jpg);
+  height: 720px;
+}

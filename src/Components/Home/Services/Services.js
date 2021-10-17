@@ -1,53 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Service from '../Service/Service'
 import './Services.css'
 
-const services = [
-  {
-    id: 1,
-    name: 'Ginecology',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque et non erat. Maecenas nibh dolor, malesuada et bibendum a, sagittis accumsan ipsum.',
-    img: 'https://i.ibb.co/bRqcMtp/01.png',
-  },
-  {
-    id: 2,
-    name: 'Ginecology',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque et non erat. Maecenas nibh dolor, malesuada et bibendum a, sagittis accumsan ipsum.',
-    img: 'https://i.ibb.co/YP7fSG5/02.png',
-  },
-  {
-    id: 3,
-    name: 'Ginecology',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque et non erat. Maecenas nibh dolor, malesuada et bibendum a, sagittis accumsan ipsum.',
-    img: 'https://i.ibb.co/3dTv2GX/03.png',
-  },
-  {
-    id: 4,
-    name: 'Ginecology',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque et non erat. Maecenas nibh dolor, malesuada et bibendum a, sagittis accumsan ipsum.',
-    img: 'https://i.ibb.co/VjY6bXh/04.png',
-  },
-  {
-    id: 5,
-    name: 'Ginecology',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque et non erat. Maecenas nibh dolor, malesuada et bibendum a, sagittis accumsan ipsum.',
-    img: 'https://i.ibb.co/DfksbR7/05.png',
-  },
-  {
-    id: 6,
-    name: 'Ginecology',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque et non erat. Maecenas nibh dolor, malesuada et bibendum a, sagittis accumsan ipsum.',
-    img: 'https://i.ibb.co/YLZn82L/06.png',
-  },
-]
-
 const Services = () => {
-  return <div></div>
+  const [services, setServices] = useState([])
+
+  useEffect(() => {
+    fetch('services.json')
+      .then((res) => res.json())
+      .then((data) => setServices(data))
+  }, [])
+  return (
+    <div className="container">
+      <div className="row">
+        {services.map((service) => (
+          <Service key={service.id} service={service}></Service>
+        ))}
+      </div>
+    </div>
+  )
 }
 
 export default Services
