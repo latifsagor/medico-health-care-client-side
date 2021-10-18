@@ -8,6 +8,7 @@ import ServiceDetails from './Components/ServiceDetails/ServiceDetails/ServiceDe
 import Login from './Components/Login/Login/Login'
 import Header from './Components/Shared/Header/Header'
 import AuthProvider from './Components/Contexts/AuthProvider'
+import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute'
 
 function App() {
   return (
@@ -25,9 +26,9 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/serviceDetails/:serviceId">
+            <PrivateRoute path="/serviceDetails/:serviceId">
               <ServiceDetails></ServiceDetails>
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>
