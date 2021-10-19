@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Medico Health Care
 
-This project was bootstrapped with [Live Link:](https://medico-health-care.web.app/).
+This project MEDICO HEALTH CARE [Live Link:](https://medico-health-care.web.app/).
 
 ## Available Scripts
 
