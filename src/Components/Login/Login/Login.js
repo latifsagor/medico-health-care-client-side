@@ -15,10 +15,6 @@ const Login = () => {
     signInWithEmailAndPassword,
   } = useAuth()
 
-  // const handleRegistration = (e) => {
-  //   console.log('Registration will be added')
-  //   e.preventDefault()
-  // }
   return (
     <div className="container py-4">
       <h3>Please {isLogin ? 'Login' : 'Register'}</h3>

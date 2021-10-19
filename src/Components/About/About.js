@@ -1,6 +1,7 @@
 import React from 'react'
 import './About.css'
 import photo1 from '../images/about.jpg'
+import photo2 from '../images/img-woman-and-nurse-oxygen.png'
 
 const About = () => {
   return (
@@ -43,6 +44,25 @@ const About = () => {
               Patient Engagement. As a proud third-generation family owned and
               operated business, MSC has a strong pledge to excellence.
             </p>
+          </div>
+        </div>
+      </div>
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-lg-6 col-md-6 col-12">
+            <h3>Home Oxygen</h3>
+            <p>
+              MSC provides Oxygen Therapy to patients with varying needs,
+              lifestyles and goals. A Respiratory Therapist is available 24/7
+              for all patients to ensure comfort and satisfaction. We also offer
+              home visits to determine the best portable option for each
+              patient. Our Clinical Team works hard to recommend a long lasting,
+              reliable and clinically proven piece of equipment for each
+              patient.
+            </p>
+          </div>
+          <div className="col-lg-6 col-md-6 col-12 d-flex justify-content-center">
+            <img className="img-fluid h-75 " src={photo2} alt="" />
           </div>
         </div>
       </div>
