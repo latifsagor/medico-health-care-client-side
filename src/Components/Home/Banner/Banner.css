@@ -4,6 +4,6 @@
 
 .banner-img {
   background-image: url(../../images/banner.jpg);
-  height: 100vh;
+  padding: 150px 0;
   width: 100%;
 }

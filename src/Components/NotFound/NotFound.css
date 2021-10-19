@@ -1,0 +1,7 @@
+.notFound {
+  background-image: url('../images/banner_error_404.jpg');
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

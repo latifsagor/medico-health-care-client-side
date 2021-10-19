@@ -10,6 +10,9 @@ const Login = () => {
     handleEmailChange,
     handlePasswordChange,
     error,
+    toggleLogin,
+    isLogin,
+    signInWithEmailAndPassword,
   } = useAuth()
 
   // const handleRegistration = (e) => {
@@ -17,10 +20,56 @@ const Login = () => {
   //   e.preventDefault()
   // }
   return (
-    <div className="container">
-      <h3>Please Login</h3>
+    <div className="container py-4">
+      <h3>Please {isLogin ? 'Login' : 'Register'}</h3>
       <div>
-        <form action="" onSubmit={signInWithEmail}>
+        <Form onSubmit={signInWithEmail}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              onBlur={handleEmailChange}
+              type="email"
+              placeholder="Enter email"
+            />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              onBlur={handlePasswordChange}
+              type="password"
+              placeholder="Password"
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check
+              onChange={toggleLogin}
+              type="checkbox"
+              label="Already Register?"
+            />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+      </div>
+
+      <div className="text-danger">{error}</div>
+      <br />
+      <Button onClick={signInUsingGoogle} variant="outline-danger">
+        Google Sign In
+      </Button>
+    </div>
+  )
+}
+
+export default Login
+
+{
+  /* <form action="" onSubmit={signInWithEmail}>
           <input
             onBlur={handleEmailChange}
             type="email"
@@ -38,16 +87,5 @@ const Login = () => {
           />
           <br />
           <input type="submit" value="Submit" />
-        </form>
-      </div>
-
-      <div className="text-danger">{error}</div>
-      <br />
-      <Button onClick={signInUsingGoogle} variant="outline-warning">
-        Google Sign In
-      </Button>
-    </div>
-  )
+        </form> */
 }
-
-export default Login

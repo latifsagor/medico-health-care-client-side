@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  Button,
-  ButtonGroup,
-  Container,
-  Nav,
-  Navbar,
-  NavDropdown,
-} from 'react-bootstrap'
+import { Button, Container, Nav, Navbar } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import useAuth from '../../hooks/useAuth'
@@ -31,7 +24,7 @@ const Header = () => {
               Services
             </Nav.Link>
             {user?.email ? (
-              <Button onClick={logOut} variant="outline-warning">
+              <Button onClick={logOut} variant="outline-warning mx-3">
                 Log Out
               </Button>
             ) : (
@@ -40,7 +33,11 @@ const Header = () => {
               </Nav.Link>
             )}
             <Navbar.Text>
-              Signed in as: <a href="#login"> {user?.displayName} </a>
+              Signed in as:{' '}
+              <a href="#login">
+                {' '}
+                {user?.displayName ? user?.displayName : user?.email}{' '}
+              </a>
             </Navbar.Text>
           </Nav>
         </Navbar.Collapse>

@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <div className="banner-img">
       <div className="container">
-        <div className="row d-flex align-items-center">
+        <div className="row d-flex flex-row align-items-center ">
           <div className="text-start col-lg-6 col-md-6 col-12 text-light">
             <h2>Medico Hospital</h2>
             <p>

@@ -9,6 +9,7 @@ import Login from './Components/Login/Login/Login'
 import Header from './Components/Shared/Header/Header'
 import AuthProvider from './Components/Contexts/AuthProvider'
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute'
+import Footer from './Components/Shared/Footer/Footer'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer />
         </BrowserRouter>
       </AuthProvider>
     </div>
