@@ -10,6 +10,8 @@ import Header from './Components/Shared/Header/Header'
 import AuthProvider from './Components/Contexts/AuthProvider'
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute'
 import Footer from './Components/Shared/Footer/Footer'
+import About from './Components/About/About'
+import ContactUs from './Components/ContactUs/ContactUs'
 
 function App() {
   return (
@@ -23,6 +25,12 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/contactUs">
+              <ContactUs />
             </Route>
             <Route path="/login">
               <Login></Login>
